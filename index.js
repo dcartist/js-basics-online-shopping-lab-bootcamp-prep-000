@@ -1,5 +1,20 @@
 var cart = [];
 
+Array.prototype.clean = function(deleteValue) {
+for (var i = 0; i < this.length; i++) {
+if (this[i] == deleteValue) {
+  this.splice(i, 1);
+  i--;
+}
+}
+return this;
+};
+
+
+function clearCart(){
+  cart.length = 0
+}
+
 function getCart() {
  return cart;
 }
@@ -64,20 +79,47 @@ function total() {
 
 function removeFromCart(item) {
   // write your code here
-  var tester = false
-  for (var i = 0; cart.length >= i; i++){
-    if (cart[i].itemName === item){
-      cart.splice(i, 1);
-      tester = true
-    } else if (cart.length == i && tester == false){
-      var nocart = 'That item is not in your cart.'
-      return nocart
+
+  var nocart = 'That item is not in your cart.'
+  var cartmatch = cart
+  for (var i=0; cart.length>i; i++){
+    if (typeof cart[i].itemName != undefined){
+      if(cart[i].itemName == item){
+        cart.slice(i,1)
+      }
+    }else {
+      
     }
+
+  }
+
+// No changes in the cart
+  if (cartmatch === cart){
+    return nocart
   }
 
 }
 
 
+
+
 function placeOrder(cardNumber) {
   // write your code here
+  // cardNumber = int(cardNumber)
+
+  var noNumber = 'Sorry, we don\'t have a credit card on file for you.'
+  var cost = 0
+  // var card = cardNumber.length
+   if (cardNumber === undefined){
+    return noNumber
+  } else {
+    var i = 0, cost = 0
+    while(cart.length > i){
+      cost += cart[i].itemPrice
+      i++
+    }
+    var processed = 'Your total cost is $'+cost+', which will be charged to the card '+cardNumber+'.'
+    clearCart()
+    return processed
+  }
 }
