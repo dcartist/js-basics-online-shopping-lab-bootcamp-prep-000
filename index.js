@@ -83,8 +83,10 @@ function removeFromCart(item) {
   var nocart = 'That item is not in your cart.'
   var cartmatch = cart
   for (var i = cart.length - 1; i >= 0; i--){
+      if(cart[i].itemName == item){
+        cart = cart.slice(i,1)
+      }
 
-    
     // if (typeof cart[i].itemName != undefined){
     //   if(cart[i].itemName == item){
     //     cart = cart.slice(i,1)
