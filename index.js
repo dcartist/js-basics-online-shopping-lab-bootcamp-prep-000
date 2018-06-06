@@ -84,7 +84,7 @@ function removeFromCart(item) {
   var cartmatch = cart, cart1
   for (var i = cart.length - 1; i >= 0; i--){
       if(cart[i].itemName == item){
-        cart1 = cart.slice(i,1,item)
+        cart.slice(i,1,item)
         cart = cart1
         return cart
       }
