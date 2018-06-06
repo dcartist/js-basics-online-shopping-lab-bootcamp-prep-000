@@ -82,11 +82,38 @@ function removeFromCart(item) {
 
   var nocart = 'That item is not in your cart.'
   var cartmatch = cart, cart1
-  for (var i = cart.length - 1; i >= 0; i--){
-      if(cart[i].itemName == item){
-        cart = cart.slice(cart[i].itemName)
-        return cart
-      }
+  // for (var i = cart.length - 1; i >= 0; i--){
+  //     if(cart[i].itemName == item){
+  //       cart = cart.slice(cart[i].itemName)
+  //       return cart
+  //     }
+
+  var elements = cart;
+  var remove = item
+  var index = elements.indexOf(remove);
+
+  while (index !== -1) {
+      elements.splice(index, 1);
+      index = elements.indexOf(remove);
+  }
+
+  console.log(elements);
+
+
+
+      // var elements = [1, 5, 5, 3, 5, 2, 4];
+      // var remove = 5;
+      // var index = elements.indexOf(remove);
+      //
+      // while (index !== -1) {
+      //     elements.splice(index, 1);
+      //     index = elements.indexOf(remove);
+      // }
+      //
+      // console.log(elements);
+
+
+
 
     // if (typeof cart[i].itemName != undefined){
     //   if(cart[i].itemName == item){
