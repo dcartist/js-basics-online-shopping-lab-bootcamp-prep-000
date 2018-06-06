@@ -96,9 +96,7 @@ function removeFromCart(item) {
       elements.splice(index, 1);
       index = elements.indexOf(remove);
   }
-
-  console.log(elements);
-
+ 
 
 
       // var elements = [1, 5, 5, 3, 5, 2, 4];
