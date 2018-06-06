@@ -88,7 +88,7 @@ function removeFromCart(item) {
   //       return cart
   //     }
 
-  var elements = cart;
+  var elements = cart
   var remove = item
   var index = elements.indexOf(remove);
 
