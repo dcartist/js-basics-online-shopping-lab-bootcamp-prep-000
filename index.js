@@ -85,6 +85,7 @@ function removeFromCart(item) {
   for (var i = cart.length - 1; i >= 0; i--){
       if(cart[i].itemName == item){
         cart = cart.slice(cart.indexOf(item),1)
+        return cart
       }
 
     // if (typeof cart[i].itemName != undefined){
