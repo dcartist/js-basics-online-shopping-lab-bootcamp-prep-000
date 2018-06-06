@@ -81,7 +81,7 @@ function removeFromCart(item) {
   // write your code here
 
   var nocart = 'That item is not in your cart.'
-  var cartmatch = cart
+  var cartmatch = cart, cart1
   for (var i = cart.length - 1; i >= 0; i--){
       if(cart[i].itemName == item){
         cart.slice(cart.indexOf(item),1)
