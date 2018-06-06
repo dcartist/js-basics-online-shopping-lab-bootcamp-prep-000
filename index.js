@@ -88,7 +88,7 @@ function removeFromCart(item) {
         cart.slice(i,1)
       }
     }else {
-      
+
     }
 
   }
