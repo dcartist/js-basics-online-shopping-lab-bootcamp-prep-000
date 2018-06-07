@@ -82,19 +82,19 @@ function removeFromCart(item) {
 
   var nocart = 'That item is not in your cart.'
   var cartmatch = cart, cart1
-  for (var i = cart.length - 1; i >= 0; i--){
-      if(cart[i].itemName == item){
-        cart.splice(cart.indexOf(item),1)
-        return cart
-      }
-    }
+  // for (var i = cart.length - 1; i >= 0; i--){
+  //     if(cart[i].itemName == item){
+  //       cart.splice(cart.indexOf(item),1)
+  //       return cart
+  //     }
+  //   }
     //
-    // for (var i = cart.length - 1; i >= 0; i--){
-    //     if(cart[i].itemName == item){
-    //       cart.splice(i,1)
-    //       return cart
-    //     }
-    //   }
+    for (var i = cart.length - 1; i >= 0; i--){
+        if(cart[i].itemName == item){
+          cart.splice(i,1)
+          return cart
+        }
+      }
 
   // var elements = cart
   // var remove = item
