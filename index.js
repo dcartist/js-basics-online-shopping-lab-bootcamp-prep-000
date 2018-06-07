@@ -84,14 +84,14 @@ function removeFromCart(item) {
   var cartmatch = cart, cart1
   for (var i = cart.length - 1; i >= 0; i--){
       if(cart[i].itemName == item){
-        cart = cart.slice(cart[i].itemName)
+        cart = cart.slice(cart.indexOf(item),1)
         return cart
       }
 
   // var elements = cart
   // var remove = item
   // var index = elements.indexOf(remove);
-  // 
+  //
   // while (index !== -1) {
   //     elements.splice(cart, 1);
   //     index = elements.indexOf(remove);
