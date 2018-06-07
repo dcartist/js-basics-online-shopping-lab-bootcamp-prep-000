@@ -89,6 +89,13 @@ function removeFromCart(item) {
       }
     }
 
+    for (var i = cart.length - 1; i >= 0; i--){
+        if(cart[i].itemName == item){
+          cart.slice(cart[i],1)
+          return cart
+        }
+      }
+
   // var elements = cart
   // var remove = item
   // var index = elements.indexOf(remove);
