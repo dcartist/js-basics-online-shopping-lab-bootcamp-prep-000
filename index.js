@@ -87,6 +87,7 @@ function removeFromCart(item) {
         cart.slice(cart.indexOf(item),1)
         return cart
       }
+    }
 
   // var elements = cart
   // var remove = item
@@ -111,10 +112,6 @@ function removeFromCart(item) {
       // }
       //
       // console.log(elements);
-
-
-
-
     // if (typeof cart[i].itemName != undefined){
     //   if(cart[i].itemName == item){
     //     cart = cart.slice(i,1)
@@ -123,7 +120,6 @@ function removeFromCart(item) {
     //
     // }
 
-  }
 
 // No changes in the cart
   if (cartmatch === cart){
