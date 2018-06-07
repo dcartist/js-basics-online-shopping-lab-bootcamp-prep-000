@@ -97,7 +97,7 @@ function removeFromCart(item) {
   //     index = elements.indexOf(remove);
   // }
 
-  console.log(elements);
+  // console.log(elements);
 
 
 
